@@ -70,6 +70,7 @@ The `utils/` directory contains shared helper functions:
 | Day | Title | Part 1 | Part 2 | Notes |
 |-----|-------|--------|--------|-------|
 | [01](day01/) | Secret Entrance | ⭐ | ⭐ | Circular dial rotations |
+| [02](day02/) | Gift Shop | ⭐ | ⭐ | Pattern matching in number sequences |
 
 ## Notes
 
