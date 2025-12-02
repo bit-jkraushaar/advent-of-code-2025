@@ -2,6 +2,12 @@
 
 My solutions for [Advent of Code 2025](https://adventofcode.com/2025) implemented in Python.
 
+## ⚠️ Disclaimer
+
+The main purpose of this repository is to verify how well large language models perform at solving Advent of Code puzzles in 2025. Most (possibly all) code in this repository is written by AI using **Visual Studio Code with GitHub Copilot** and **Claude Sonnet 4.5** in Agent mode.
+
+This is an experiment to evaluate AI capabilities in problem-solving, code generation, and following complex instructions for algorithmic challenges.
+
 ## Project Structure
 
 ```
