@@ -77,6 +77,7 @@ The `utils/` directory contains shared helper functions:
 |-----|-------|--------|--------|-------|
 | [01](day01/) | Secret Entrance | ⭐ | ⭐ | Circular dial rotations |
 | [02](day02/) | Gift Shop | ⭐ | ⭐ | Pattern matching in number sequences |
+| [03](day03/) | Lobby | ⭐ | ⭐ | Battery joltage maximization |
 
 ## Notes
 
