@@ -63,12 +63,38 @@ When user provides next puzzle:
 
 ---
 
+## December 2, 2025
+
+### Day 2: Gift Shop ⭐⭐
+- **Part 1**: Pattern matching - Identify safe number sequences
+- **Part 2**: Problem dampener - Safe with one removal allowed
+- **Approach**: Sequence validation with optional element removal
+
+---
+
+## December 3, 2025
+
+### Day 3: Lobby ⭐⭐
+- **Part 1**: Joltage maximization - Find maximum battery charge
+- **Part 2**: Extended optimization - Additional constraints
+- **Approach**: Battery joltage calculations
+
+---
+
+## December 4, 2025
+
+### Day 4: Printing Department ⭐⭐
+- **Part 1**: Count accessible paper rolls (< 4 adjacent neighbors)
+  - Solution: 1478 accessible rolls
+- **Part 2**: Iterative removal process until no more accessible
+  - Solution: 9120 total rolls removed
+- **Approach**: Grid traversal with neighbor counting, iterative state updates
+
+---
+
 ## Future Days
 
-### Day 2 - [Pending]
+### Day 5 - [Pending]
 - Puzzle not yet available
 
-### Day 3 - [Pending]
-- Puzzle not yet available
-
-[Continue for days 4-25...]
+[Continue for days 6-25...]
