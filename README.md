@@ -79,6 +79,7 @@ The `utils/` directory contains shared helper functions:
 | [02](day02/) | Gift Shop | ⭐ | ⭐ | Pattern matching in number sequences |
 | [03](day03/) | Lobby | ⭐ | ⭐ | Battery joltage maximization |
 | [04](day04/) | Printing Department | ⭐ | ⭐ | Iterative paper roll removal |
+| [05](day05/) | Cafeteria | ⭐ | ⭐ | Range merging optimization |
 
 ## Notes
 

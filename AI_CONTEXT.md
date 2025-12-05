@@ -205,6 +205,14 @@ for line in data:
 - **Key Concept**: Modular arithmetic, counting during vs after operations
 - **Solutions**: Part 1: 982, Part 2: 6106
 
+### Day 5: Cafeteria
+- **Theme**: Ingredient inventory management with ID ranges
+- **Part 1**: Count how many available IDs fall within fresh ranges
+- **Part 2**: Count total unique IDs covered by all fresh ranges
+- **Key Concept**: Range merging optimization - avoid iterating millions of individual values
+- **Solutions**: Part 1: 529, Part 2: 344260049617193
+- **Important Lesson**: Use range arithmetic instead of sets for large ranges
+
 ## Important Notes for AI Assistant
 
 1. **Always test with examples first** - Each puzzle provides examples with expected results
@@ -278,6 +286,41 @@ python test_all.py
 - **Think about scale** - Part 2 often requires handling larger inputs
 - **Use appropriate data structures** - Sets, dicts, deques, etc.
 - **Don't overthink** - Most solutions are 20-50 lines of code
+
+## Performance and Optimization
+
+### Avoiding Memory/Time Issues with Large Ranges
+
+**CRITICAL**: When working with numeric ranges in AoC puzzles:
+
+- **DO NOT** iterate through every individual value in a range
+- **DO NOT** create sets/lists of millions of individual IDs from ranges
+- **DO** use range arithmetic and merging algorithms
+
+**Example - Day 5 (Cafeteria):**
+- ❌ **BAD**: `for id in range(start, end + 1): fresh_ids.add(id)` → Memory overflow on large ranges
+- ✅ **GOOD**: Merge overlapping ranges, then count: `total += (end - start + 1)`
+
+**Range Merging Algorithm:**
+```python
+# Sort ranges by start position
+ranges.sort()
+
+# Merge overlapping or adjacent ranges
+merged = []
+for start, end in ranges:
+    if merged and start <= merged[-1][1] + 1:
+        # Extend the last merged range
+        merged[-1] = (merged[-1][0], max(merged[-1][1], end))
+    else:
+        # Add as new range
+        merged.append((start, end))
+
+# Count total values in O(n) instead of O(total_values)
+total = sum(end - start + 1 for start, end in merged)
+```
+
+**Key principle**: Work with range boundaries, not individual values.
 
 ## Progress Tracking
 
