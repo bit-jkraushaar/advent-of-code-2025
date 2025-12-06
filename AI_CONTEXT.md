@@ -213,6 +213,14 @@ for line in data:
 - **Solutions**: Part 1: 529, Part 2: 344260049617193
 - **Important Lesson**: Use range arithmetic instead of sets for large ranges
 
+### Day 6: Trash Compactor
+- **Theme**: Cephalopod math worksheet parsing
+- **Part 1**: Parse horizontally arranged math problems (traditional left-to-right reading)
+- **Part 2**: Parse using cephalopod math (right-to-left column reading where each column is a digit position)
+- **Key Concept**: Different parsing strategies for the same input format
+- **Solutions**: Part 1: 5667835681547, Part 2: 9434900032651
+- **Important Lesson**: Column-wise vs row-wise data interpretation
+
 ## Important Notes for AI Assistant
 
 1. **Always test with examples first** - Each puzzle provides examples with expected results
