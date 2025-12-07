@@ -221,6 +221,14 @@ for line in data:
 - **Solutions**: Part 1: 5667835681547, Part 2: 9434900032651
 - **Important Lesson**: Column-wise vs row-wise data interpretation
 
+### Day 7: Laboratories
+- **Theme**: Tachyon beam splitting through a manifold
+- **Part 1**: Count how many times beams split (BFS simulation)
+- **Part 2**: Count timelines using many-worlds interpretation (path counting with DP)
+- **Key Concept**: Optimization - count paths instead of enumerating them
+- **Solutions**: Part 1: 1649, Part 2: 16937871060075
+- **Important Lesson**: Dynamic programming with path counting to avoid exponential complexity. Track how many paths reach each position, not the paths themselves.
+
 ## Important Notes for AI Assistant
 
 1. **Always test with examples first** - Each puzzle provides examples with expected results
@@ -329,6 +337,38 @@ total = sum(end - start + 1 for start, end in merged)
 ```
 
 **Key principle**: Work with range boundaries, not individual values.
+
+### Avoiding Exponential Path Enumeration
+
+**CRITICAL**: When counting paths or timelines in AoC puzzles:
+
+- **DO NOT** enumerate every individual path when there are exponential possibilities
+- **DO NOT** store complete path sequences when only the count is needed
+- **DO** use dynamic programming to count paths
+
+**Example - Day 7 (Laboratories):**
+- ❌ **BAD**: `queue.append((path + (new_pos,),))` → Memory/time explosion with 2^splits paths
+- ✅ **GOOD**: Track path counts at each position: `path_count[pos] += count`
+
+**Path Counting Algorithm:**
+```python
+# Track number of paths reaching each position
+path_count = defaultdict(int)
+path_count[start] = 1
+
+# BFS through positions
+for pos in queue:
+    count = path_count[pos]
+    
+    # When paths split (e.g., at a junction)
+    for next_pos in get_next_positions(pos):
+        path_count[next_pos] += count
+        
+# Total paths = sum of counts at exit positions
+total = sum(path_count[exit_pos] for exit_pos in exits)
+```
+
+**Key principle**: Count paths, don't enumerate them.
 
 ## Progress Tracking
 

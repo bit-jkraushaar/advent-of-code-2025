@@ -81,6 +81,7 @@ The `utils/` directory contains shared helper functions:
 | [04](day04/) | Printing Department | ⭐ | ⭐ | Iterative paper roll removal |
 | [05](day05/) | Cafeteria | ⭐ | ⭐ | Range merging optimization |
 | [06](day06/) | Trash Compactor | ⭐ | ⭐ | Cephalopod math worksheet parsing |
+| [07](day07/) | Laboratories | ⭐ | ⭐ | Tachyon beam splitting simulation |
 
 ## Notes
 
