@@ -82,6 +82,7 @@ The `utils/` directory contains shared helper functions:
 | [05](day05/) | Cafeteria | ⭐ | ⭐ | Range merging optimization |
 | [06](day06/) | Trash Compactor | ⭐ | ⭐ | Cephalopod math worksheet parsing |
 | [07](day07/) | Laboratories | ⭐ | ⭐ | Tachyon beam splitting simulation |
+| [08](day08/) | Playground | ⭐ | ⭐ | Minimum spanning tree with Union-Find |
 
 ## Notes
 
