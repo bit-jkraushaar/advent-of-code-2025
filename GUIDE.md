@@ -43,6 +43,7 @@
 | `python run.py all` | Run all completed solutions |
 | `python day01/solution.py` | Run day 1 directly |
 | `python test_all.py` | Test all solutions (no output) |
+| `pip install -r requirements.txt` | Install external dependencies (if needed) |
 
 ## Project Structure
 
@@ -52,6 +53,7 @@ advent-of-code/
 ├── new_day.py          # Create new day directories
 ├── template.py         # Template for new solutions
 ├── test_all.py         # Test all solutions
+├── requirements.txt    # External dependencies (e.g., PuLP for ILP)
 ├── utils/              # Shared utilities
 │   ├── __init__.py
 │   └── input_reader.py # File reading helpers
@@ -118,6 +120,8 @@ def main():
 - **Document your approach** in the day's README.md
 - **Use the utilities** to avoid repeating file reading code
 - **Run `test_all.py`** before committing to ensure nothing broke
+- **Install dependencies** with `pip install -r requirements.txt` when needed
+- **Recognize problem patterns** - some puzzles require specialized libraries (ILP, graphs, etc.)
 
 ## Git Workflow (Optional)
 

@@ -12,6 +12,7 @@ advent-of-code/
 ├── new_day.py          # Script to create new day directories
 ├── template.py         # Template for new solutions
 ├── test_all.py         # Test all solutions
+├── requirements.txt    # External dependencies (PuLP, etc.)
 ├── README.md           # Project overview
 ├── GUIDE.md            # User guide
 ├── .gitignore          # Git ignore
@@ -369,6 +370,66 @@ total = sum(path_count[exit_pos] for exit_pos in exits)
 ```
 
 **Key principle**: Count paths, don't enumerate them.
+
+### Recognizing Integer Linear Programming Problems
+
+**CRITICAL**: When puzzles involve optimization with linear constraints:
+
+- **DO NOT** try to solve with BFS/DFS state-space search
+- **DO NOT** use Gaussian elimination alone (finds *a* solution, not the *minimum*)
+- **DO** recognize the ILP pattern and use specialized solvers
+
+**Example - Day 10 Part 2 (Factory Joltage):**
+- Problem: Minimize button presses to reach exact counter values
+- Each button can be pressed 0+ times and affects specific counters
+- ❌ **BAD**: BFS through state space → exponential states (max value ~260)
+- ❌ **BAD**: Gaussian elimination → finds any solution, not minimum
+- ✅ **GOOD**: Formulate as ILP and use PuLP library
+
+**ILP Pattern Recognition:**
+```
+If puzzle asks to:
+- Minimize/maximize a sum of variables
+- Subject to linear equality/inequality constraints
+- With integer variables
+
+→ Use Integer Linear Programming (PuLP, scipy.optimize.linprog, CVXPY)
+```
+
+**ILP with PuLP Template:**
+```python
+import pulp
+
+# Create problem
+prob = pulp.LpProblem("Name", pulp.LpMinimize)  # or LpMaximize
+
+# Create variables (integers >= 0)
+vars = [pulp.LpVariable(f"x{i}", 0, None, 'Integer') for i in range(n)]
+
+# Objective function: minimize sum of variables
+prob += pulp.lpSum(vars)
+
+# Add constraints
+for constraint_data in constraints:
+    prob += (
+        pulp.lpSum(vars[j] for j in affected_indices) == target_value
+    )
+
+# Solve
+prob.solve(pulp.PULP_CBC_CMD(msg=0))
+
+# Get result
+if prob.status == pulp.LpStatusOptimal:
+    result = int(pulp.value(prob.objective))
+```
+
+**Performance Tips for ILP:**
+- Precompute sparse constraint matrix structure
+- Use short variable names to reduce overhead
+- Minimize object creation in constraint loops
+- PuLP with CBC solver can handle 100+ small ILP problems in <5 seconds
+
+**Key principle**: Don't reinvent optimization algorithms - use proven libraries.
 
 ## Progress Tracking
 

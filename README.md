@@ -84,6 +84,7 @@ The `utils/` directory contains shared helper functions:
 | [07](day07/) | Laboratories | ⭐ | ⭐ | Tachyon beam splitting simulation |
 | [08](day08/) | Playground | ⭐ | ⭐ | Minimum spanning tree with Union-Find |
 | [09](day09/) | Movie Theater | ⭐ | ⭐ | Coordinate compression for sparse grids |
+| [10](day10/) | Factory | ⭐ | ⭐ | GF(2) toggles + Integer Linear Programming |
 
 ## Notes
 

@@ -1,0 +1,5 @@
+# Advent of Code 2025 - Python Dependencies
+# Most days use only standard library, but some require specialized packages
+
+# Day 10 Part 2: Integer Linear Programming solver
+pulp>=2.7.0

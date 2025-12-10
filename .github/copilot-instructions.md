@@ -155,10 +155,19 @@ grid = {(x, y): char
 2. **Add example data to `main()`** - validates logic before running on large inputs
 3. **Keep Part 1 working** when implementing Part 2 (parts are cumulative)
 4. **Use `test_all.py`** before committing to catch regressions
+5. **Performance requirement** - Solutions should complete in **under 10 seconds**
+   - If a solution exceeds 10 seconds, optimize or consider alternative algorithms
+   - For optimization problems (minimize/maximize with constraints), consider specialized libraries:
+     - Integer Linear Programming: PuLP, scipy.optimize
+     - Graph algorithms: networkx
+     - Don't reinvent the wheel - use proven mathematical solvers
 
 ## Integration Points
 
-- **No external dependencies** - stdlib only (common AoC practice)
+- **Minimal external dependencies** - prefer stdlib when possible
+- **Specialized libraries allowed** - when problem requires (ILP, graphs, etc.)
+  - Add dependencies to `requirements.txt` with comments explaining which day uses them
+  - Example: `pulp>=2.7.0  # Day 10 Part 2: Integer Linear Programming`
 - **Python 3.9+** - uses modern features (walrus operator, dict merge, etc.)
 - **Git ignores `input.txt`** files - they're personal puzzle inputs (not shareable)
 
