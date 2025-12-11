@@ -85,6 +85,7 @@ The `utils/` directory contains shared helper functions:
 | [08](day08/) | Playground | ⭐ | ⭐ | Minimum spanning tree with Union-Find |
 | [09](day09/) | Movie Theater | ⭐ | ⭐ | Coordinate compression for sparse grids |
 | [10](day10/) | Factory | ⭐ | ⭐ | GF(2) toggles + Integer Linear Programming |
+| [11](day11/) | Reactor | ⭐ | ⭐ | Graph path counting with constraint tracking |
 
 ## Notes
 
