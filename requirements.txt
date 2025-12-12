@@ -3,3 +3,6 @@
 
 # Day 10 Part 2: Integer Linear Programming solver
 pulp>=2.7.0
+
+# Day 12: Constraint Programming for polyomino packing
+ortools>=9.8.0

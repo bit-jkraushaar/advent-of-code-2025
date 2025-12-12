@@ -86,6 +86,7 @@ The `utils/` directory contains shared helper functions:
 | [09](day09/) | Movie Theater | ⭐ | ⭐ | Coordinate compression for sparse grids |
 | [10](day10/) | Factory | ⭐ | ⭐ | GF(2) toggles + Integer Linear Programming |
 | [11](day11/) | Reactor | ⭐ | ⭐ | Graph path counting with constraint tracking |
+| [12](day12/) | Christmas Tree Farm | ⭐ |  | Polyomino packing with CP-SAT solver |
 
 ## Notes
 
